@@ -24,3 +24,15 @@
 
 - List와 Tuple의 가장 큰 차이점은 값을 변경할 수 있는가의 여부
   List는 값을 수정 할수 있지만 Tuple은 값을 변경할 수 없습니다.
+
+# Form VS ModelForm 
+- 장고에서 사용하는 폼은 크게 2개가 있다.
+forms.Form 과 forms.ModelForm
+Form은 HTML의 <form> 태그를 다루기 위한 도구라고 한다면
+ModelForm은 Form에 Model을 연결시킨 것이라고 볼 수있다.
+회원가입 기능을 만들 때 Form을 이용한다면 클라이언트로부터 전달받은 ID나 닉네임 등을 이미 사용하고있는 계정이 있는지 없는지 따로 코드를 작성하여 체크를 해야하지만, ModelForm은 기본적으로 Model과 연동이 되어있기때문에 아래와 같이 ModelField에 unique=True 속성만 추가해준다면 장고가 알아서 중복된 ID가 있는지 없는지를 체크해준다.
+회원가입의 경우 ModelForm을 사용하면 장고가 알아서 중복여부를 관리해주기때문에 편하게 진행할 수 있지만,
+로그인에도 ModelForm를 사용한다면 ID와 PW의 값을 올바르게 입력했을 때 당연하게도 DB상에 존재하는 계정이기때문에 '중복된 ID가 존재한다'는 말도안되는 에러를 발생시켜 버린다. (에러가 존재하므로 is_valid()함수는 False값을 리턴한다.)
+즉, models.Model객체를 저장하기위한 폼으로 ModelForm을 사용하는 것이 좋다.
+따라서 회원가입은 forms.ModelForm을, 로그인은 forms.Form을 이용하는 것이 좋을 것 같다.
+
