@@ -130,3 +130,22 @@ migrate: 적용되지 않은 migrations들을(설정값들을) 적용시키는 �
 # 데코레이터
 
 # 어노테이션
+
+# python version 중요한 이유
+- 회사의 서비스를 언제까지 검토를 받을수 있는지 
+ex) 만약 3.6v -> 3.7v 에는 문제가 없을까?
+
+# package
+- 남들이 만들어 놓은 소스
+
+# 가상환경
+- 패키지들을 효율적으로 관리하기 위해서
+
+# Django는 MVT (MODEL,VIEW,TEMPLATE)
+- Model은 회원(아이디,비밀번호,이름), View는 데이터처리(Controller 역할), Template(화면단)
+
+# Pycharm 오류
+- 1. UNKNOWN ENCODING: X-WINDOWS-949
+해결방법: settings-Editor-File Encodings - Project Encoding 을 UTF-8 로 변경
+안 될시: https://otrodevym.tistory.com/entry/Intellij-unmappable-character-0xEC-for-encoding-x-windows-949
+에서 2줄 추가
