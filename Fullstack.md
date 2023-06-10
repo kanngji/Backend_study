@@ -90,4 +90,8 @@ class Tag(models.Model):
 마이그레이션은 대부분 자동화되지만 언제 마이그레이션을 생성해야 하고
 언제 실행해야 하는지 그리고 발생할 수 있는 일반적인 문제를 알아야함
 
-# Django 뷰
+# Google Icon
+- link
+<!-- Variable icon font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+

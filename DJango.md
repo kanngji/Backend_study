@@ -1,35 +1,41 @@
 # python의 장점
-- 쉽고 간결하다. 그래서 빠른 개발이 가능하다. 빠른 개발은 
-빠른 배포로 이어져 시장의 피드백을 받을 수 있다. 
-오픈소스 언어이므로 많은 모듈 등이 존재한다.
+
+- 쉽고 간결하다. 그래서 빠른 개발이 가능하다. 빠른 개발은
+  빠른 배포로 이어져 시장의 피드백을 받을 수 있다.
+  오픈소스 언어이므로 많은 모듈 등이 존재한다.
 
 # python의 단점
+
 - 인터프리터 언어기 때문에 속도가 느리다
 
 # 리스트와 튜플의 주된 차이점은?
+
 - 리스트는 mutable 하고 튜플은 immutable 합니다
 
 # 파이썬에서 메모리 관리는 어떻게 하나요?
+
 파이썬에서는 개별적인 힙을 사용해서 메모리를 유지합니다.
 따라서 힙은 모든 파이썬 객체와 자료구조를 가지고 있습니다.
 
 # Lambda 와 Def의 차이
-- def는 다중표현을 갖고 lambda는 단일함수 입니다.
-Def는 함수를 생성하고 이름을 지정하여 나중에 다시 호출합니다.
-Lambda는 함수 객체를 구성하고 반환합니다.
-Def는 선언 할 수 있지만 Lambda는 할 수 없습니다.
 
-# *Args
+- def는 다중표현을 갖고 lambda는 단일함수 입니다.
+  Def는 함수를 생성하고 이름을 지정하여 나중에 다시 호출합니다.
+  Lambda는 함수 객체를 구성하고 반환합니다.
+  Def는 선언 할 수 있지만 Lambda는 할 수 없습니다.
+
+# \*Args
+
 - N개의 매개변수를 넘기겠다는 표시입니다.
 
 # Kwargs는 뭔가요?
+
 - N개의 변수를 파라미터를 넘기겠다는 것인데 이름 혹은 키워드를 가지고 있습니다.
 
 # 파이썬의 iterators는 무엇인가?
-- iterators는 배열과 같은 객체로서 next()로 다음 구성 성분으로 이동하는 것이 
-가능한 것을 의미한다.
 
-
+- iterators는 배열과 같은 객체로서 next()로 다음 구성 성분으로 이동하는 것이
+  가능한 것을 의미한다.
 
 # migration 과 makemigtrations
 
@@ -119,8 +125,9 @@ migrate: 적용되지 않은 migrations들을(설정값들을) 적용시키는 �
   걸리더라도 그 시간동안 다른 작업을 할 수 있음으로 자원을 효율적으로 사용할 수 있습니다.
 
 # 캡슐화, 추상화, 상속성, 다형성이란?
+
 - 캡슐화: 데이터 구조와 데이터를 다루는 방법들을 결합시켜 묶는 것
-변수와 함수를 하나로 묶는 것
+  변수와 함수를 하나로 묶는 것
 - 추상화: 공통의 속성이나 기능을 묶어 이름을 붙이는 것
 - 상속성: 상위개념의 특징을 하위 개념이 물려받는 것
 - 다형성: 부모클래스에서 물려받은 가상 함수를 자식 클래스 내에서 오버라이딩 되어 사용되는 것
@@ -132,20 +139,48 @@ migrate: 적용되지 않은 migrations들을(설정값들을) 적용시키는 �
 # 어노테이션
 
 # python version 중요한 이유
-- 회사의 서비스를 언제까지 검토를 받을수 있는지 
-ex) 만약 3.6v -> 3.7v 에는 문제가 없을까?
+
+- 회사의 서비스를 언제까지 검토를 받을수 있는지
+  ex) 만약 3.6v -> 3.7v 에는 문제가 없을까?
 
 # package
+
 - 남들이 만들어 놓은 소스
 
 # 가상환경
+
 - 패키지들을 효율적으로 관리하기 위해서
 
 # Django는 MVT (MODEL,VIEW,TEMPLATE)
+
 - Model은 회원(아이디,비밀번호,이름), View는 데이터처리(Controller 역할), Template(화면단)
 
 # Pycharm 오류
+
 - 1. UNKNOWN ENCODING: X-WINDOWS-949
-해결방법: settings-Editor-File Encodings - Project Encoding 을 UTF-8 로 변경
-안 될시: https://otrodevym.tistory.com/entry/Intellij-unmappable-character-0xEC-for-encoding-x-windows-949
-에서 2줄 추가
+     해결방법: settings-Editor-File Encodings - Project Encoding 을 UTF-8 로 변경
+     안 될시: https://otrodevym.tistory.com/entry/Intellij-unmappable-character-0xEC-for-encoding-x-windows-949
+     에서 2줄 추가
+
+- 2. No such table: django_session 에러
+     django프로젝트에서 admin으로 접속할때 오류가 나는 현상
+     해결방법: python manage.py makemigrations 이후
+     python manage.py migrate 하고 다시 python manage.py runserver 하면 가동
+
+# User-agent 란
+
+- user agent는 HTTP 요청을 보내는 디바이스와 브라우저 등 사용자 소프트웨어의 식별 정보를 담고 있는 request header의 한 종류이다. 임의로 수정될 수 없는 값이고, 보통 HTTP 요청 에러가 발생했을 때 요청을 보낸 사용자 환경을 알아보기 위해 사용한다.
+- 장고로 웹페이지 개발 중에 스크래핑할 부분이 생겨서 알아보다가 들어보게 되었다.
+- ex) 웹페이지 www.naver.com/robots.txt 를 입력하면
+  User-agent: *
+  Disallow: /
+  Allow : /$
+  이렇게 되어있는데 *는 모든 사용자 에게 권한이 Disaalow: / 되어있다는걸 알수있는데 /$ 는 처음페이지는 가능하다고 나와있다.
+
+# CBV 와 FBV
+
+- Django는 views.py를 가지고있고 urls.py에서 요청에 따라 views.py로 보내서 다시 처리한다
+  이때 Views를 처리하는 방법은 2가지가 있다
+  함수(Function-Base Views), 클래스(Class-Base Views)
+  FBV는 코드를 확장하거나 재사용하기 어렵고 조건문으로 HTTP 메소드 구분해야하는 단점이 있고
+  CBV는 상속과 믹스인 기능을 이용하여 코드 재사용하고 뷰를 체계적으로 고성할수 있다.
